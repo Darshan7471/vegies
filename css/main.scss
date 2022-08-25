@@ -1,23 +1,141 @@
+
+$primary-color: #20A544;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
 body {
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
     ul,li {
         padding: 0;
         list-style: none;
         margin: 0;
     }
+    .btn,button,input {
+        &:focus {
+            box-shadow: none!important;
+            outline: 0;
+        }
+    }
 
+}
+.btn-login {
+    background-color: $primary-color;
+    color: #fff;
+    padding: 8px 30px;
+    font-size: 14px;
+    margin-right: 20px;
+    transition: all .3s ease;
+    span {
+        margin-right: 5px;
+    }
+    img {
+        width: 20px;
+        filter: brightness(100) ;
+    }
+    &:hover {
+        border-color: $primary-color;
+        color: $primary-color;
+        img {
+            filter: inherit
+        }
+    }
+    &:focus {
+        border-color: $primary-color;
+        color: $primary-color;
+        img {
+            filter: inherit
+        }
+    }
 }
 .header{
     width: 100%;
     float: left;
     height: auto;
     box-shadow: 1px 1px 16px #00000069;
-    background-color: red;
-    padding: 10px 0px;
+    padding:0px;
+    .logo {
+     img {
+        width: 120px!important;
+     }
+    }
+    .nav-menu  {
+        display: inline-flex;
+        .nav-item {
+            padding: 0px 15px;
+            .nav-link {
+                color: #222222;
+                img {
+                    display: none;
+                }
+            }
+        }
+
+        .nav-link.active, .navbar-nav .show>.nav-link {
+            color: $primary-color!important;
+        }
+        
+     }
+     .sign-up-add-to-cart {
+        .login-sec {
+            float: left;
+            position: relative;
+        }
+            .cart {
+                img {
+                    width: 40px!important;
+                }
+        }
+        .login-cart {
+            position: absolute;
+            -webkit-backdrop-filter: invert(1);
+            backdrop-filter: invert(1);
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: -4px 6px 13px rgba(0, 0, 0, 0.2705882353);
+            left: 0;
+            top: 137%;
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            display: none;
+            width: 250px;
+        }
+     }
 }
+.active-popup {
+    .login-cart {
+        display: block!important;
+         input {
+            padding: 0px 10px!important;
+            height: 45px;
+            line-height: inherit;
+            &:focus {
+                border-color: $primary-color;
+            }
+        }
+        label {
+            padding: 10px;
+            height: auto;
+        }
+        
+    }
+}
+
 
 .header-fixed {
     position: fixed;
     top: 0;
     box-shadow: 1px 1px 16px #00000069;
+}
+
+.form-floating>.form-control-plaintext~label, .form-floating>.form-control:focus~label, .form-floating>.form-control:not(:placeholder-shown)~label, .form-floating>.form-select~label {
+    opacity: 2;
+    transform: scale(.85) translateY(-.5rem) translateX(.15rem);
+    top: -5px;
+    background: #fff!important;
+    color: $primary-color;
+    width: fit-content;
+    padding: 0;
+    left: 10px;
 }

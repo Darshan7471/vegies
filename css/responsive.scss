@@ -1,0 +1,82 @@
+
+
+@media screen and (max-width:991px) {
+    div#fixed-bottom {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        left: 0;
+        box-shadow: -1px -3px 16px #00000036;
+        padding: 10px 0px;
+        .nav-menu {
+            width: 100%;
+            justify-content: center;
+        }
+    }
+    .navbar-nav-scroll {
+        max-height: initial;
+        overflow-x: scroll;
+        display: inline-flex;
+    }
+    .search-desk {
+        display: none;
+    }
+}
+
+@media screen and (max-width:576px) {
+    .header  {
+         .logo  {
+            img {
+                width: 95px !important;
+            }
+         }
+         .sign-up-add-to-cart  {
+            .login-sec {
+                position: inherit;
+                .login-cart {
+                    left: 5vw;
+                    top: 100px;
+                    width: 90vw;
+                }
+            }
+                    .btn-login {
+                        padding: 7px 22px;
+                        font-size: 13px;
+                        margin-right: 20px;
+                    }
+                   .cart {
+                    img {
+                        width: 40px !important;
+                        margin-top: -5px;
+                    }
+                   }
+                }
+    }
+
+    div#fixed-bottom {
+        .nav-menu {
+            justify-content: left;
+            li {
+                a {
+                    img {
+                        display: block;
+                        width: 20px;
+                        margin: auto;
+                        padding-bottom: 5px;
+                        filter:grayscale(100) ;
+                    }
+                    span {
+                        font-size: 14px;
+                    }
+                }
+                a.nav-link.active {
+                    img {
+                        filter:inherit ;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
