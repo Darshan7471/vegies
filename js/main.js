@@ -5,3 +5,7 @@ $(function () {
         $('.login-sec').toggleClass('active-popup');
     });
 });
+
+//this is for login main banner slide
+
+

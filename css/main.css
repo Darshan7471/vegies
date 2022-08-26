@@ -48,6 +48,7 @@ body .btn:focus, body button:focus, body input:focus {
   float: left;
   height: auto;
   box-shadow: 1px 1px 16px rgba(0, 0, 0, 0.4117647059);
+  position: relative;
   padding: 0px;
 }
 .header .logo img {
