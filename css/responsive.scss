@@ -57,6 +57,7 @@
         .nav-menu {
             justify-content: left;
             li {
+                width: 25vw;
                 a {
                     img {
                         display: block;
@@ -67,6 +68,7 @@
                     }
                     span {
                         font-size: 14px;
+                        display: none;
                     }
                 }
                 a.nav-link.active {
@@ -76,6 +78,9 @@
                 }
             }
         }
+    }
+    .hero-banner {
+        height: 45vh;
     }
 
 }

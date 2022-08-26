@@ -47,12 +47,15 @@ body .btn:focus, body button:focus, body input:focus {
   width: 100%;
   float: left;
   height: auto;
-  box-shadow: 1px 1px 16px rgba(0, 0, 0, 0.4117647059);
   position: relative;
   padding: 0px;
+  background: transparent !important;
+  position: fixed;
+  z-index: 1030;
 }
 .header .logo img {
   width: 120px !important;
+  filter: brightness(100);
 }
 .header .nav-menu {
   display: inline-flex;
@@ -62,12 +65,13 @@ body .btn:focus, body button:focus, body input:focus {
 }
 .header .nav-menu .nav-item .nav-link {
   color: #222222;
+  color: #fff;
 }
 .header .nav-menu .nav-item .nav-link img {
   display: none;
 }
 .header .nav-menu .nav-link.active, .header .nav-menu .navbar-nav .show > .nav-link {
-  color: #20A544 !important;
+  color: #fff;
 }
 .header .sign-up-add-to-cart .login-sec {
   float: left;
@@ -75,6 +79,7 @@ body .btn:focus, body button:focus, body input:focus {
 }
 .header .sign-up-add-to-cart .cart img {
   width: 40px !important;
+  filter: brightness(100);
 }
 .header .sign-up-add-to-cart .login-cart {
   position: absolute;
@@ -94,6 +99,7 @@ body .btn:focus, body button:focus, body input:focus {
 
 .active-popup .login-cart {
   display: block !important;
+  z-index: 10200000;
 }
 .active-popup .login-cart input {
   padding: 0px 10px !important;
@@ -112,6 +118,9 @@ body .btn:focus, body button:focus, body input:focus {
   position: fixed;
   top: 0;
   box-shadow: 1px 1px 16px rgba(0, 0, 0, 0.4117647059);
+}
+.header-fixed .logo img {
+  filter: inherit;
 }
 
 .form-floating > .form-control:not(:-moz-placeholder-shown) ~ label {
@@ -148,4 +157,43 @@ body .btn:focus, body button:focus, body input:focus {
   width: fit-content;
   padding: 0;
   left: 10px;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+.hero-banner {
+  width: 100%;
+  float: left;
+  height: 70vh;
+  position: relative;
+}
+.hero-banner img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.hero-banner:after {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(7, 74, 25, 0.6980392157);
+  top: 0;
+  left: 0;
+  content: "";
+}
+.hero-banner .vegetable-serach-sec {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 50%;
+  z-index: 1020;
+  text-align: center;
+}
+.hero-banner .vegetable-serach-sec h2 {
+  color: #fff;
 }/*# sourceMappingURL=main.css.map */

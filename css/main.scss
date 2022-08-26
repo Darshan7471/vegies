@@ -49,15 +49,19 @@ body {
     }
 }
 .header{
-    width: 100%;
-    float: left;
-    height: auto;
-    box-shadow: 1px 1px 16px #00000069;
-    position: relative;
-    padding:0px;
+        width: 100%;
+        float: left;
+        height: auto;
+        position: relative;
+        padding: 0px;
+        background: transparent!important;
+        position: fixed;
+        z-index: 1030;
+    
     .logo {
      img {
         width: 120px!important;
+        filter: brightness(100);
      }
     }
     .nav-menu  {
@@ -66,6 +70,7 @@ body {
             padding: 0px 15px;
             .nav-link {
                 color: #222222;
+                color:#fff;
                 img {
                     display: none;
                 }
@@ -73,7 +78,7 @@ body {
         }
 
         .nav-link.active, .navbar-nav .show>.nav-link {
-            color: $primary-color!important;
+            color: #fff
         }
         
      }
@@ -85,6 +90,7 @@ body {
             .cart {
                 img {
                     width: 40px!important;
+                    filter: brightness(100) ;
                 }
         }
         .login-cart {
@@ -104,9 +110,11 @@ body {
         }
      }
 }
+
 .active-popup {
     .login-cart {
         display: block!important;
+        z-index: 10200000;
          input {
             padding: 0px 10px!important;
             height: 45px;
@@ -127,7 +135,12 @@ body {
 .header-fixed {
     position: fixed;
     top: 0;
-    box-shadow: 1px 1px 16px #00000069;
+    box-shadow: 1px 1px 16px rgba(0, 0, 0, 0.4117647059);
+    .logo {
+        img {
+            filter: inherit;
+        }
+    }
 }
 
 .form-floating>.form-control-plaintext~label, .form-floating>.form-control:focus~label, .form-floating>.form-control:not(:placeholder-shown)~label, .form-floating>.form-select~label {
@@ -141,3 +154,40 @@ body {
     left: 10px;
 }
 
+img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+.hero-banner {
+    width: 100%;
+    float: left;
+    height: 70vh;
+    position: relative;
+    img {
+        height: 100%;
+        object-fit: cover;
+    }
+    &:after{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: #074a19b2;
+        top: 0;
+        left: 0;
+        content: '';
+      }
+      .vegetable-serach-sec {
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        top: 50%;
+        z-index: 1020;
+        text-align: center;
+        h2 {
+        color: #fff;
+    }
+      }
+}

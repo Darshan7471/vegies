@@ -44,6 +44,9 @@
   div#fixed-bottom .nav-menu {
     justify-content: left;
   }
+  div#fixed-bottom .nav-menu li {
+    width: 25vw;
+  }
   div#fixed-bottom .nav-menu li a img {
     display: block;
     width: 20px;
@@ -53,8 +56,12 @@
   }
   div#fixed-bottom .nav-menu li a span {
     font-size: 14px;
+    display: none;
   }
   div#fixed-bottom .nav-menu li a.nav-link.active img {
     filter: inherit;
+  }
+  .hero-banner {
+    height: 45vh;
   }
 }/*# sourceMappingURL=responsive.css.map */

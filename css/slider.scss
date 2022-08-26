@@ -1,0 +1,47 @@
+/* this css only for the sliders please do not paste other css code in this file */
+/* and for the responsive please this this file also (-Darshan) */
+$primary-color: #20A544;
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  position: relative;
+    &:after{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: #074a199e;
+        content: '';
+      }
+ img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+
+
+.swiper-slide {
+
+}
