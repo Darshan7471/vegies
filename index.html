@@ -10,6 +10,9 @@
   <link rel="stylesheet" href="css/responsive.css">
   <link rel="stylesheet" href="css/swiper-bundle.min.css"/>
   <link rel="stylesheet" href="css/slider.css"/>
+  <link rel="stylesheet" href="css/owl.carousel.min.css"/>
+  <link rel="stylesheet" href="css/owl.theme.default.min.css"/>
+
 </head>
 <body>
 
@@ -90,12 +93,39 @@
   <img src="images/banner-1.jpg" alt="">
   <div class="vegetable-serach-sec">
     <h2>Discover the best Vegetables & Fruits in Nashik</h2>
-    <input type="serach" name="search" placeholder="search">
-    <a href="#" type="button">
-      <img src="images/search.svg" alt="">
-    </a>
+    <div class="serach-sec">
+      <input type="serach" class="form-control" name="search" placeholder="search">
+      <a href="#" class="search-banner" type="button">
+        <img src="images/search.svg" alt="">
+      </a>
+    </div>
   </div>
 </section>
+
+
+<section class="reconmanded-sec main" id="recomanded">
+  <div class="container">
+    <h2>Recomanded</h2>
+    <div class="owl-carousel owl-theme" id="reconmanded-slide">
+       <div class="item">
+           <div class="slide-card">
+            <img src="images/product/product-1.png" alt="">
+            <div class="slide-text">
+              <h3>Mix Fruit Bucket</h3>
+              <p>5 Categories</p>
+            </div>
+           </div>
+       </div>
+       <div class="item">
+        <div class="slide-card">
+          <img src="images/product/product-1.png" alt="">
+        </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+
 
 
 
@@ -107,6 +137,7 @@
 <script src="js/bootstrap.bundle.min.js"></script>
 <script src="js/main.js"></script>
 <script src="js/swiper-bundle.min.js"></script>
+<script src="js/owl.carousel.js"></script>
 <script>
   var swiper = new Swiper(".HeroSlider", {
     pagination: {
@@ -118,6 +149,45 @@
         prevEl: ".swiper-button-prev",
       },
   });
+</script>
+
+<script>
+	$('#reconmanded-slide').owlCarousel({
+		loop: true,
+		margin: 16,
+		nav: true,
+    center: true,
+		autoplay:true,
+         autoplayTimeout:3000,
+      autoplayHoverPause:true,
+      afterAction: function(el){
+   //remove class active
+   this
+   .$owlItems
+   .removeClass('active')
+
+   //add class active
+   this
+   .$owlItems //owl internal $ object containing items
+   .eq(this.currentItem + 1)
+   .addClass('active1')    
+    },
+		 navText: [
+        '<i class="fa fa-angle-left" aria-hidden="true"></i>',
+        '<i class="fa fa-angle-right" aria-hidden="true"></i>'
+    ],
+		responsive: {
+			0: {
+				items: 1
+			},
+			600: {
+				items: 6
+			},
+			1000: {
+				items: 5
+			}
+		}
+	});
 </script>
 
 </body>

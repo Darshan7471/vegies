@@ -19,6 +19,15 @@ body {
     }
 
 }
+.main {
+    width: 100%;
+    float: left;
+    height: auto;
+}
+p {
+    padding: 0;
+    margin: 0;
+}
 .btn-login {
     background-color: $primary-color;
     color: #fff;
@@ -119,6 +128,7 @@ body {
             padding: 0px 10px!important;
             height: 45px;
             line-height: inherit;
+
             &:focus {
                 border-color: $primary-color;
             }
@@ -133,6 +143,7 @@ body {
 
 
 .header-fixed {
+    background: #fff!important;
     position: fixed;
     top: 0;
     box-shadow: 1px 1px 16px rgba(0, 0, 0, 0.4117647059);
@@ -141,6 +152,27 @@ body {
             filter: inherit;
         }
     }
+    .nav-menu  {
+        .nav-item {
+            .nav-link {
+                color: #222222!important;
+                color: #fff;
+            }
+        }
+        .nav-link.active, .header .nav-menu .navbar-nav .show > .nav-link {
+            color: $primary-color!important;
+        }
+    }
+     .sign-up-add-to-cart {
+        .cart{
+            img {
+                width: 40px !important;
+                filter: brightness(100) invert(1);
+                opacity: .7;
+            }
+        }
+     }
+ 
 }
 
 .form-floating>.form-control-plaintext~label, .form-floating>.form-control:focus~label, .form-floating>.form-control:not(:placeholder-shown)~label, .form-floating>.form-select~label {
@@ -155,7 +187,6 @@ body {
 }
 
 img {
-    width: 100%;
     max-width: 100%;
     height: auto;
 }
@@ -168,6 +199,7 @@ img {
     img {
         height: 100%;
         object-fit: cover;
+        width: 100%;
     }
     &:after{
         position: absolute;
@@ -183,11 +215,61 @@ img {
         left: 0;
         right: 0;
         margin: auto;
-        top: 50%;
+        top: 40%;
         z-index: 1020;
         text-align: center;
         h2 {
         color: #fff;
     }
       }
+}
+
+.serach-sec {
+    width: 42vw;
+    margin: auto;
+    position: relative;
+    margin-top: 3.5rem;
+     input {
+        padding: 15px 20px;
+        border-radius: 1rem;
+        padding-right: 50px;
+    }
+    .search-banner {
+        position: absolute;
+        top: 30%;
+        right: 4%;
+         img {
+            filter: inherit;
+            width: 20px;
+        }
+    }
+}
+
+.reconmanded-sec {
+    margin-top:30px;
+    h2 {
+        text-align: center;
+        padding-bottom: 40px;
+    }
+    .slide-card {
+        width: 100%;
+        float: left;
+        height: auto;
+        border-radius: 15px;
+        border: 1px solid #C2C2C2;
+        img {
+            border-radius: 15px;
+                display: block;
+                width: 100%;
+                box-shadow: 0px 2px 7px rgba(39, 5, 5, 0.13);
+        }
+        .slide-text {
+                width: 100%;
+                float: left;
+                padding: 10px;
+            h3 {
+                font-size: 1rem;
+            }
+        }
+    }
 }

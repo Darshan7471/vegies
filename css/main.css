@@ -13,6 +13,17 @@ body .btn:focus, body button:focus, body input:focus {
   outline: 0;
 }
 
+.main {
+  width: 100%;
+  float: left;
+  height: auto;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
 .btn-login {
   background-color: #20A544;
   color: #fff;
@@ -115,12 +126,25 @@ body .btn:focus, body button:focus, body input:focus {
 }
 
 .header-fixed {
+  background: #fff !important;
   position: fixed;
   top: 0;
   box-shadow: 1px 1px 16px rgba(0, 0, 0, 0.4117647059);
 }
 .header-fixed .logo img {
   filter: inherit;
+}
+.header-fixed .nav-menu .nav-item .nav-link {
+  color: #222222 !important;
+  color: #fff;
+}
+.header-fixed .nav-menu .nav-link.active, .header-fixed .nav-menu .header .nav-menu .navbar-nav .show > .nav-link {
+  color: #20A544 !important;
+}
+.header-fixed .sign-up-add-to-cart .cart img {
+  width: 40px !important;
+  filter: brightness(100) invert(1);
+  opacity: 0.7;
 }
 
 .form-floating > .form-control:not(:-moz-placeholder-shown) ~ label {
@@ -160,7 +184,6 @@ body .btn:focus, body button:focus, body input:focus {
 }
 
 img {
-  width: 100%;
   max-width: 100%;
   height: auto;
 }
@@ -175,6 +198,7 @@ img {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  width: 100%;
 }
 .hero-banner:after {
   position: absolute;
@@ -190,10 +214,60 @@ img {
   left: 0;
   right: 0;
   margin: auto;
-  top: 50%;
+  top: 40%;
   z-index: 1020;
   text-align: center;
 }
 .hero-banner .vegetable-serach-sec h2 {
   color: #fff;
+}
+
+.serach-sec {
+  width: 42vw;
+  margin: auto;
+  position: relative;
+  margin-top: 3.5rem;
+}
+.serach-sec input {
+  padding: 15px 20px;
+  border-radius: 1rem;
+  padding-right: 50px;
+}
+.serach-sec .search-banner {
+  position: absolute;
+  top: 30%;
+  right: 4%;
+}
+.serach-sec .search-banner img {
+  filter: inherit;
+  width: 20px;
+}
+
+.reconmanded-sec {
+  margin-top: 30px;
+}
+.reconmanded-sec h2 {
+  text-align: center;
+  padding-bottom: 40px;
+}
+.reconmanded-sec .slide-card {
+  width: 100%;
+  float: left;
+  height: auto;
+  border-radius: 15px;
+  border: 1px solid #C2C2C2;
+}
+.reconmanded-sec .slide-card img {
+  border-radius: 15px;
+  display: block;
+  width: 100%;
+  box-shadow: 0px 2px 7px rgba(39, 5, 5, 0.13);
+}
+.reconmanded-sec .slide-card .slide-text {
+  width: 100%;
+  float: left;
+  padding: 10px;
+}
+.reconmanded-sec .slide-card .slide-text h3 {
+  font-size: 1rem;
 }/*# sourceMappingURL=main.css.map */

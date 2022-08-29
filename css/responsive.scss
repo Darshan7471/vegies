@@ -11,6 +11,31 @@
         .nav-menu {
             width: 100%;
             justify-content: center;
+             li {
+                width: 10vw;
+                a {
+                    img {
+                        display: block;
+                        width: 26px;
+                        margin: auto;
+                        filter:grayscale(100) ;
+                    }
+                    span {
+                        font-size: 14px;
+                        display: none;
+                    }
+                }
+                a.nav-link.active {
+                    img {
+                        filter:inherit ;
+                    }
+                }
+
+                    span {
+                        display: none;
+                    }
+                }
+             }
         }
     }
     .navbar-nav-scroll {
@@ -21,7 +46,30 @@
     .search-desk {
         display: none;
     }
-}
+    .hero-banner {
+        &:before {
+            position: absolute;
+            width: 100%;
+            height: 30px;
+            background: #fff;
+            left: 0;
+            content: '';
+            bottom: -2px;
+            z-index: 1020;
+            border-radius: 30px 30px 0px 0px;
+        }
+    }
+
+    .mobile-banner-new {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        height: 30vh!important;
+        h2 {
+            display: none;
+        }
+    }
+
 
 @media screen and (max-width:576px) {
     .header  {
@@ -81,7 +129,39 @@
     }
     .hero-banner {
         height: 45vh;
+        &:after {
+            background: rgb(7 74 25 / 78%);
+        }
+
     }
 
+}
+
+@media screen and (max-width:480px) {
+    .header {
+        .sign-up-add-to-cart  {
+            .cart {
+                img {
+                    width: 30px!important;
+                    margin: 0;
+                }
+            }
+        }
+    }
+    .hero-banner  {
+        .vegetable-serach-sec {
+            top: 35%;
+             h2 {
+                color: #fff;
+                font-size: 1.5rem;
+                line-height: inherit;
+            }
+            .serach-sec {
+                width: 80vw;
+                margin-top: 1rem;
+            }
+        }
+
+    }
 }
 
